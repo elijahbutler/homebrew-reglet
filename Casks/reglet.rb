@@ -19,4 +19,8 @@ cask "reglet" do
 
   app "Reglet.app"
   binary "#{appdir}/Reglet.app/Contents/Resources/reglet"
+
+  postflight do
+    system "xattr -dr com.apple.quarantine #{appdir}/Reglet.app"
+  end
 end
