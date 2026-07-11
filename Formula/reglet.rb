@@ -1,16 +1,16 @@
 class Reglet < Formula
   desc "Local-first control plane for AI agent rules, skills, and MCP configs"
   homepage "https://github.com/elijahbutler/reglet"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.arm?
     url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-darwin-arm64"
-    sha256 "5d4cf59e53e83a975bec720fe6a7d2b3dce7e1ef3137db11ed255fedb26c5760"
+    sha256 "dea5f3d6db270e79d4f23599754978ecd5c487dadb3a9acd7be296f8fbae1c90"
   else
     url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-darwin-x64"
-    sha256 "477cca9c4d203f68e85eb5f50400ce54c8193953585f1207176389746277a774"
+    sha256 "155bb4d22b7902da2c995259d876d4d03da52c3970f04819d0ccc466bc7763fc"
   end
 
   def install
