@@ -1,14 +1,15 @@
 cask "reglet" do
-  version "0.1.6"
+  version "0.1.19"
 
   on_arm do
-    sha256 "cb54ac5b788ff6b86143cc87dea7d8aea900c05d29484fb39d158d7721110dc6"
-    url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-macos-arm64.app.zip"
-  end
+    sha256 "fb4effd5a2ccf15383fff7fbc31da77f650b2778daadcdd7e06140652aae333c"
 
+    url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-desktop-macos-arm64.dmg"
+  end
   on_intel do
-    sha256 "cc87ddd07b277f2ac7b105df90ba1be6800dbb11ba8a7c271ccc117f0f0c665f"
-    url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-macos-x86_64.app.zip"
+    sha256 "5683bd21432c329bc4a03b7cbde2d52836df2214fd0c7a0257748910c5357c97"
+
+    url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-desktop-macos-x86_64.dmg"
   end
 
   name "Reglet"
@@ -18,9 +19,8 @@ cask "reglet" do
   depends_on macos: :sonoma
 
   app "Reglet.app"
-  binary "#{appdir}/Reglet.app/Contents/Resources/reglet"
 
   postflight do
-    system "xattr -dr com.apple.quarantine #{appdir}/Reglet.app"
+    system "xattr", "-dr", "com.apple.quarantine", "#{appdir}/Reglet.app"
   end
 end
