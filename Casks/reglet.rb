@@ -1,13 +1,13 @@
 cask "reglet" do
-  version "0.1.19"
+  version "0.1.20"
 
   on_arm do
-    sha256 "fb4effd5a2ccf15383fff7fbc31da77f650b2778daadcdd7e06140652aae333c"
+    sha256 "9ff7af7175f02c50cadeebc0c38a94c310a69d8595babe878c2fa0998c707aaf"
 
     url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-desktop-macos-arm64.dmg"
   end
   on_intel do
-    sha256 "5683bd21432c329bc4a03b7cbde2d52836df2214fd0c7a0257748910c5357c97"
+    sha256 "626994462a96b246cc5de24b5bff150dee75f35e0632a93e7d80b39917e5cbba"
 
     url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-desktop-macos-x86_64.dmg"
   end
