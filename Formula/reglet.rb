@@ -7,10 +7,10 @@ class Reglet < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-darwin-arm64"
-    sha256 "b8cfc3e67eadef97af7bf650b7834d9ae01e3e8935d4fde8e658dc149d8b4063"
+    sha256 "0681d4832e544e8a8104f8ef0b20790cc754b607cb3f0ada07d48c2066ac47c9"
   else
     url "https://github.com/elijahbutler/reglet/releases/download/v#{version}/reglet-darwin-x64"
-    sha256 "fc435922dd8db85ebac38f7d2bfd9cd5d3792e3fdb491e82e93a8440303e280b"
+    sha256 "053079a7e136100145eb15aaa1c081d05f5a95270052fc61aa21320547cdace6"
   end
 
   def install
